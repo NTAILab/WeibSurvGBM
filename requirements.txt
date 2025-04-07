@@ -1,0 +1,4 @@
+xgboost==3.0.0
+numpy==2.2.4
+scikit-survival==0.24.1
+scipy==1.15.2
