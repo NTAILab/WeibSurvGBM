@@ -5,7 +5,7 @@ from .loss import surv_grad_hess, surv_loss
 from scipy.integrate import trapezoid
 from sksurv.metrics import concordance_index_censored
 
-class GBMSurvivalParamModel:
+class WeibSurvGBM:
 
     """
     Gradient Boosting Model for Parametric Survival Analysis.

@@ -40,14 +40,14 @@ To use the model for survival analysis, follow these steps:
 Here’s an example of using the `WeibSurvGBM` model for survival analysis:
 
 ```python
-from weib_surv_gbm.model import GBMSurvivalParamModel
+from weib_surv_gbm.model import WeibSurvGBM
 from sksurv.datasets import load_veterans_lung_cancer
 from sklearn.model_selection import train_test_split
 
 X, y = load_veterans_lung_cancer()
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-model = GBMSurvivalParamModel(n_estimators=100, max_depth=5, learning_rate=0.1)
+model = WeibSurvGBM(n_estimators=100, max_depth=5, learning_rate=0.1)
 model.fit(X_train, y_train)
 
 predictions = model.predict(X_test)
